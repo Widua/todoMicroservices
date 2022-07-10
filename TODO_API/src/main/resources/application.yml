@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/TodoApp
+    username: TodoApp
+    password: TodoPassword
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  application:
+    name: TODO_API
+server:
+  port: 0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.todoApp.com:8761/eureka/
+    register-with-eureka: false
+    fetch-registry: false
