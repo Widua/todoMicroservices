@@ -1,8 +1,9 @@
 spring:
   application:
-    name: Eureka
+    name: EurekaServer
 server:
   port: 8761
 eureka:
-  instance:
-    hostname: eureka.todoApp.com
+  client:
+    fetch-registry: false
+    register-with-eureka: false
