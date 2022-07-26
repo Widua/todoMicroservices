@@ -20,7 +20,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     private final AuthenticationManager manager ;
 
-    private final JWTToken jwtConfig = new JWTToken() ;
+    private final JWTTokenUtils jwtConfig = new JWTTokenUtils() ;
 
     public JWTAuthenticationFilter(AuthenticationManager manager){
         this.manager = manager ;
