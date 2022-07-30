@@ -6,10 +6,7 @@ import me.widua.authenticationservice.models.UserRegisterModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -20,6 +17,11 @@ public class UserAPI {
     @Autowired
     public UserAPI(UserModelManager manager){
         this.manager = manager ;
+    }
+
+    @GetMapping("/test")
+    public String getTest(){
+        return "TEST PASSED";
     }
 
     @PostMapping("/register")
